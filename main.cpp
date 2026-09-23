@@ -21,10 +21,10 @@ int main() {
     set.printAll();
 
     cout << endl << "===== PEREVIRKA VALIDNOSTI (nekorektni sprob dodavannya/zminy) =====" << endl;
-    set.addTransistor("", 100.0, 1.0);        // porozhniy typ
-    set.addTransistor("Test", -5.0, 1.0);     // vidyemne pidsylennya
-    set.setGain(0, -50.0);                    // nevirna zmina isnuyuchoho obyekta
-    set.setMaxCurrent(1, 250.0);              // strum ponad mezhu
+    set.addTransistor("", 100.0, 1.0);        
+    set.addTransistor("Test", -5.0, 1.0);     
+    set.setGain(0, -50.0);                    
+    set.setMaxCurrent(1, 250.0);             
 
     cout << endl << "===== ZMINA POLIV ZA ZNACHENNYAM =====" << endl;
     set.setType(0, "KT315G");
@@ -32,9 +32,8 @@ int main() {
     set.printAll();
 
     cout << endl << "===== VYVID ZA KRYTERIYEM (punkt 8) =====" << endl;
-    set.printByMinGain(150.0);   // maye znaytys IRF540N ta, mozhlyvo, insh
-    set.printByMinGain(5000.0);  // navmysno velyke znachennya - nichoho ne znaydeno
-
+    set.printByMinGain(150.0);   
+    set.printByMinGain(5000.0);  
     cout << endl << "===== REZULTAT OBCHYSLENNYA POTUZHNOSTI =====" << endl;
     double voltage = 12.0;
     for (int idx = 0; idx < set.getCount(); idx++) {
